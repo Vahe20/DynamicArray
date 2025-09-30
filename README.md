@@ -12,11 +12,11 @@
   old elements.
   Type restriction: Only unsigned 32-bit integers ( 0 ... 2^32−1 ).
 
-## Core Functionality
-# Construction
-  new DynamicArray()  → empty.
-  new DynamicArray(initialCapacity)  → with reserved capacity.
-  DynamicArray.from(iterable)  → build from iterable.
+# Core Functionality
+## Construction
+new DynamicArray()  → empty.
+new DynamicArray(initialCapacity)  → with reserved capacity.
+DynamicArray.from(iterable)  → build from iterable.
   
 # Capacity & Size
   size()  → current number of elements.
