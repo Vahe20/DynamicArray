@@ -1,38 +1,40 @@
 # DynamicArray (JS) — Assignment Description
-  Overview
-  Implement a DynamicArray class in JavaScript, similar to C++'s  vector . The array will be backed by a
-  typed buffer ( Uint32Array ) with explicit  size  and  capacity . The class should provide both vector-
-  like functionality and modern JS features (map, filter, reduce, iteration).
+## Overview
+### Implement a DynamicArray class in JavaScript, similar to C++'s  vector . The array will be backed by a
+### typed buffer ( Uint32Array ) with explicit  size  and  capacity . The class should provide both vector-
+### like functionality and modern JS features (map, filter, reduce, iteration).
 
 # Internal Representation
-  Buffer: Uint32Array  used internally.
-  size: Number of valid stored elements.
-  capacity: Total allocated slots in the buffer.
-  Growth policy: When adding beyond capacity, allocate a new buffer (double the capacity) and copy
-  old elements.
-  Type restriction: Only unsigned 32-bit integers ( 0 ... 2^32−1 ).
+## Buffer: Uint32Array  used internally.
+## size: Number of valid stored elements.
+## capacity: Total allocated slots in the buffer.
+## Growth policy: When adding beyond capacity, allocate a new buffer (double the capacity) and copy
+## old elements.
+## Type restriction: Only unsigned 32-bit integers ( 0 ... 2^32−1 ).
 
 # Core Functionality
 ## Construction
-new DynamicArray()  → empty.
-new DynamicArray(initialCapacity)  → with reserved capacity.
-DynamicArray.from(iterable)  → build from iterable.
+### new DynamicArray()  → empty.
+### new DynamicArray(initialCapacity)  → with reserved capacity.
+### DynamicArray.from(iterable)  → build from iterable.
   
-# Capacity & Size
-  size()  → current number of elements.
-  capacity()  → allocated buffer size.
-  empty()  → true if size is 0.
-  reserve(n)  → grow buffer to at least  n .
-  shrinkToFit()  → shrink buffer to current size.
-  clear()  → reset size to 0.
+## Capacity & Size
+### size()  → current number of elements.
+### capacity()  → allocated buffer size.
+### empty()  → true if size is 0.
+### reserve(n)  → grow buffer to at least  n .
+### shrinkToFit()  → shrink buffer to current size.
+### clear()  → reset size to 0.
+
   
-# Element Access
+  
+## Element Access
   at(i)  → value at index  i  (with bounds check).
   set(i, value)  → assign value at index  i .
   front() ,  back()  → first/last element.
   toArray()  → export as normal JS array
 
-# Modifiers
+## Modifiers
   pushBack(value)  → append.
   popBack()  → remove last element.
   insert(pos, value)  → insert at index (shift right).
@@ -40,7 +42,7 @@ DynamicArray.from(iterable)  → build from iterable.
   resize(n, fill=0)  → change size, filling new slots with default value.
   swap(i, j)  → swap two elements
 
-# Traversal & Iteration
+## Traversal & Iteration
   [Symbol.iterator]()  → allows  for..of .
   values()  → iterator of values.
   keys()  → iterator of indices.
